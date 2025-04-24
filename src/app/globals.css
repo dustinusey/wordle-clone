@@ -2,20 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground font-sans;
+}
+
+@layer components {
+  .input {
+    @apply px-4 py-2 rounded-lg border border-secondary-light focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-200 dark:border-secondary dark:focus:border-white dark:focus:ring-white;
+  }
+  
+  .card {
+    @apply bg-background rounded-xl shadow-sm p-6 dark:bg-background-dark;
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "when": {
+    "file": "**/*.{js,jsx}"
+  },
+  "instructions": [
+    "Use Tailwind CSS with a minimalist design philosophy.",
+    "Avoid using borders and background colors unless necessary.",
+    "Favor spacious layouts and moderately rounded elements (never use full rounding like `rounded-full`).",
+    "Primary color is Tailwind's indigo palette (use as 'primary'), secondary is zinc (use as 'secondary').",
+    "Use the `primary` and `secondary` theme colors via Tailwind for consistency.",
+    "Letter states in the game should each have a unique color class defined and used via Tailwind utility classes.",
+    "UI components like buttons, inputs, dropdowns, and accordions should be created as customizable and reusable components.",
+    "Use Framer Motion to animate components where appropriate (e.g., page transitions, modal entrances, hover effects).",
+    "Use Lucide icons via `react-icons` when icons are required.",
+    "Always consider that the user may have edited AI-generated code, so avoid overwriting custom modifications.",
+    "Avoid TypeScript, use JavaScript and JSX only."
+  ]
+}
