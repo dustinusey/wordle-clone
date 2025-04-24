@@ -58,8 +58,9 @@ export default function LandingPage() {
           <Button
             variant="secondary"
             size="lg"
-            className="w-full"
+            className="w-full  cursor-not-allowed"
             onClick={handleGuestPlay}
+            disabled
           >
             Play as Guest
           </Button>

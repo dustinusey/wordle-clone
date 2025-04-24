@@ -40,7 +40,7 @@ export function GameProvider({ children }) {
   const [currentGuess, setCurrentGuess] = useState("");
   const [gameOver, setGameOver] = useState(false);
   const [gameWon, setGameWon] = useState(false);
-  const [devMode, setDevMode] = useState(true); // Set to true for development
+  const [devMode, setDevMode] = useState(false); // Set to true for development
 
   const resetGameState = () => {
     setGuesses([]);
