@@ -1,12 +1,13 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import GameBoard from "../../components/game/GameBoard";
 import Keyboard from "../../components/game/Keyboard";
 import Navigation from "../../components/layout/Navigation";
 import Breadcrumbs from "../../components/ui/Breadcrumbs";
 
-export default function PlayPage() {
+function PlayContent() {
   const searchParams = useSearchParams();
   const mode = searchParams.get("mode");
 
@@ -25,5 +26,13 @@ export default function PlayPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function PlayPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PlayContent />
+    </Suspense>
   );
 }
